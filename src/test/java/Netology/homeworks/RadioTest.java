@@ -44,7 +44,7 @@ public class RadioTest {
     @Test
     public void ShouldDecreaseChannel() {
         Radio decreaseChannel = new Radio();
-        decreaseChannel.Volume = 1;
+        decreaseChannel.Channel = 1;
         decreaseChannel.decreaseChannel();
 
         int expected = 0;
