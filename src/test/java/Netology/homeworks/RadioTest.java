@@ -40,6 +40,29 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void ShouldStayZeroIfMinimal() {
+        Radio decreaseVolume = new Radio();
+        decreaseVolume.Volume = 0;
+        decreaseVolume.decreaseVolume();
+
+        int expected = 0;
+        int actual = decreaseVolume.Volume;
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void ShouldStayMaximumIfCurrentMax() {
+        Radio increaseVolume = new Radio();
+        increaseVolume.Volume = 10;
+        increaseVolume.increaseVolume();
+
+        int expected = 10;
+        int actual = increaseVolume.Volume;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 
     @Test
     public void ShouldDecreaseChannel() {

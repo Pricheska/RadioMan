@@ -13,6 +13,9 @@ public class Radio {
         if (Volume < maxVolume) {
             Volume += 1;
         }
+        else {
+            Volume = maxVolume;
+        }
     }
 
     public void decreaseVolume() {
