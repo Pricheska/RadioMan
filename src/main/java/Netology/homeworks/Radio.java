@@ -1,8 +1,23 @@
 package Netology.homeworks;
 
 public class Radio {
-    public int Volume;
-    public int Channel;
+    protected int volume;
+    protected int channel;
+
+    protected int getCurrentChannel() {
+        return channel;
+    }
+
+    protected void setCurrentChannel(int newChannel) {
+        if (newChannel > 9) {
+            return;
+        }
+        if (newChannel < 0) {
+            return;
+        } else {
+            channel = newChannel;
+        }
+    }
 
     protected int maxVolume = 10;
     protected int minVolume = 0;
@@ -10,33 +25,33 @@ public class Radio {
     protected int minChannel = 0;
 
     public void increaseVolume() {
-        if (Volume < maxVolume) {
-            Volume += 1;
-        }
-        else {
-            Volume = maxVolume;
+        boolean Volume;
+        if (volume < maxVolume) {
+            volume += 1;
+        } else {
+            volume = maxVolume;
         }
     }
 
     public void decreaseVolume() {
-        if (Volume > minVolume) {
-            Volume -= 1;
+        if (volume > minVolume) {
+            volume -= 1;
         }
     }
 
     public void increaseChannel() {
-        if (Channel < maxChannel) {
-            Channel += 1;
+        if (channel < maxChannel) {
+            channel += 1;
         } else {
-            Channel = minChannel;
+            channel = minChannel;
         }
     }
 
     public void decreaseChannel() {
-        if (Channel > minChannel) {
-            Channel -= 1;
+        if (channel > minChannel) {
+            channel -= 1;
         } else {
-            Channel = maxChannel;
+            channel = maxChannel;
         }
     }
 }
