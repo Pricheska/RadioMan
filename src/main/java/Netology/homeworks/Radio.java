@@ -1,5 +1,13 @@
 package Netology.homeworks;
 
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Radio {
     protected int volume;
     protected int channel;
@@ -8,10 +16,8 @@ public class Radio {
     protected int maxVolume = 100;
     protected int minVolume = 0;
 
-    public Radio() {
-        maxChannel = 9;
-    }
 
+<<<<<<< Updated upstream
     public Radio(int channelCount) {
         maxChannel = channelCount;
     }
@@ -68,3 +74,6 @@ public class Radio {
 
 
 
+=======
+}
+>>>>>>> Stashed changes
