@@ -159,6 +159,7 @@ public class RadioTest {
         int actual = radio.getCurrentChannel();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void ShouldSetRightAmountOfChannels() {
         Radio radio = new Radio(20);

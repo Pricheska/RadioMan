@@ -1,3 +1,4 @@
+
 package Netology.homeworks;
 
 public class Radio {
@@ -13,7 +14,7 @@ public class Radio {
     }
 
     public Radio(int channelCount) {
-        maxChannel = channelCount;
+        maxChannel = channelCount - 1;
     }
 
     protected int getCurrentChannel() {
@@ -65,6 +66,3 @@ public class Radio {
         }
     }
 }
-
-
-
